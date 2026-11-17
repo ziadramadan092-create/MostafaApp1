@@ -28,6 +28,8 @@ jobs:
         run: npm install --loglevel=error
 
       # ... (خطوة Add Android platform) ...
+      - name: Rebuild sharp
+        run: npm rebuild sharp
 
       - name: Install sharp explicitly
         run: npm install sharp --no-save --loglevel=error
