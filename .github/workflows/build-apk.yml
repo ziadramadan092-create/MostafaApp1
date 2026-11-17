@@ -25,15 +25,12 @@ jobs:
           java-version: '17'
 
       - name: Install dependencies
-        run: |
-          npm install --loglevel=error # تقليل الضجيج وتجنب فشل العملية بسبب التحذيرات
-          # إذا استمر فشل sharp، قد تحتاج لإضافة هذه الخطوة:
-          # npm rebuild sharp
+        run: npm install --loglevel=error
 
-      - name: Add Android platform
-        run: |
-          npx cap add android
-          npx cap sync android
+      # ... (خطوة Add Android platform) ...
+
+      - name: Install sharp explicitly
+        run: npm install sharp --no-save --loglevel=error
 
       - name: Generate App Icons & Splash
         run: node resources/generate-icons.js
