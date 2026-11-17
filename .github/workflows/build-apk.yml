@@ -23,9 +23,14 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install dependencies & Initialize Capacitor Android
+      - name: Install Android SDK Build Tools & Dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install -y lib32stdc++6 lib32z1
           npm install
+
+      - name: Initialize Capacitor Android & Sync
+        run: |
           npx cap init --name "Mostafa Vocab" --bundle-id com.hanzala.vocabapp --web-dir www --yes || true
           npx cap add android || true
           npx cap sync android
@@ -34,7 +39,7 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
