@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22' # ترقية Node إلى 22 (مستقر ومدعوم)
-          cache: 'npm'
+          
 
       - name: Setup Java 17
         uses: actions/setup-java@v5 # ترقية إلى v5 (الإصدار المدعوم)
