@@ -23,10 +23,15 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build Android Project with Capacitor
+      - name: Install Capacitor & Project Dependencies
         run: |
-          npm install -g @capacitor/cli
+          npm install -g @capacitor/cli @capacitor/core
           npm install
+
+      - name: Create Android Platform and Sync
+        run: |
+          npx @capacitor/cli init "Mostafa Vocab" com.hanzala.vocabapp --web-dir www --yes || true
+          npx cap add android || true
           npx cap sync android
 
       - name: Build Debug APK
