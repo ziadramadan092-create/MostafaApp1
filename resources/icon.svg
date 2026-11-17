@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A00E0"/>
+      <stop offset="100%" stop-color="#8E2DE2"/>
+    </linearGradient>
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e0d4ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="220" fill="url(#bgGrad)"/>
+  <circle cx="170" cy="170" r="130" fill="#ffffff" opacity="0.06"/>
+  <circle cx="890" cy="890" r="200" fill="#ffffff" opacity="0.06"/>
+  <circle cx="900" cy="170" r="75" fill="#00d2ff" opacity="0.18"/>
+
+  <g filter="url(#shadow)">
+    <path d="M 512 340 Q 380 298 278 340 L 278 728 Q 380 686 512 728 Z" fill="url(#bookGrad)" stroke="#4A00E0" stroke-width="9"/>
+    <path d="M 512 340 Q 644 298 746 340 L 746 728 Q 644 686 512 728 Z" fill="url(#bookGrad)" stroke="#4A00E0" stroke-width="9"/>
+    <line x1="512" y1="340" x2="512" y2="728" stroke="#4A00E0" stroke-width="11"/>
+  </g>
+
+  <text x="393" y="575" font-family="Arial Black, sans-serif" font-size="205" font-weight="900" fill="#4A00E0" text-anchor="middle">A</text>
+  <text x="632" y="595" font-family="Tahoma, Arial, sans-serif" font-size="225" font-weight="900" fill="#8E2DE2" text-anchor="middle">أ</text>
+
+  <g transform="translate(512, 845)" fill="#00d2ff">
+    <rect x="-72" y="-22" width="13" height="44" rx="6"/>
+    <rect x="-46" y="-38" width="13" height="76" rx="6"/>
+    <rect x="-20" y="-54" width="13" height="108" rx="6"/>
+    <rect x="6" y="-38" width="13" height="76" rx="6"/>
+    <rect x="32" y="-22" width="13" height="44" rx="6"/>
+    <rect x="58" y="-11" width="13" height="22" rx="6"/>
+  </g>
+</svg>
