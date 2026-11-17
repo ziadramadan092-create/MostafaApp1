@@ -23,10 +23,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install dependencies & Add Android
+      - name: Install dependencies & Initialize Capacitor Android
         run: |
           npm install
-          npx cap add android
+          npx cap init --name "Mostafa Vocab" --bundle-id com.hanzala.vocabapp --web-dir www --yes || true
+          npx cap add android || true
           npx cap sync android
 
       - name: Build Debug APK
