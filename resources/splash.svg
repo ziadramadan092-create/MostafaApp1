@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2732 2732" width="2732" height="2732">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A00E0"/>
+      <stop offset="100%" stop-color="#8E2DE2"/>
+    </linearGradient>
+  </defs>
+  <rect width="2732" height="2732" fill="url(#bgGrad)"/>
+
+  <g transform="translate(1366, 1200)">
+    <path d="M 0 -220 Q -180 -265 -315 -220 L -315 220 Q -180 175 0 220 Z" fill="#ffffff" stroke="#00d2ff" stroke-width="12"/>
+    <path d="M 0 -220 Q 180 -265 315 -220 L 315 220 Q 180 175 0 220 Z" fill="#ffffff" stroke="#00d2ff" stroke-width="12"/>
+    <line x1="0" y1="-220" x2="0" y2="220" stroke="#00d2ff" stroke-width="14"/>
+    <text x="-158" y="70" font-family="Arial Black" font-size="200" font-weight="900" fill="#4A00E0" text-anchor="middle">A</text>
+    <text x="158" y="90" font-family="Tahoma" font-size="215" font-weight="900" fill="#8E2DE2" text-anchor="middle">أ</text>
+  </g>
+
+  <text x="1366" y="1820" font-family="Tahoma, Arial, sans-serif" font-size="130" font-weight="900" fill="#ffffff" text-anchor="middle">قاموس مصطفى حنظل</text>
+  <text x="1366" y="1960" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#00d2ff" text-anchor="middle">Mostafa Vocab App</text>
+  <text x="1366" y="2080" font-family="Tahoma, sans-serif" font-size="52" font-weight="600" fill="#e0d4ff" text-anchor="middle" opacity="0.85">تطوير: مصطفى بيك حنظل 👨‍💻</text>
+</svg>
