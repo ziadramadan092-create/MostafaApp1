@@ -23,16 +23,16 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install Capacitor & Project Dependencies
-        run: |
-          npm install -g @capacitor/cli @capacitor/core
-          npm install
+      - name: Install dependencies
+        run: npm install
 
-      - name: Create Android Platform and Sync
+      - name: Add Android platform
         run: |
-          npx @capacitor/cli init "Mostafa Vocab" com.hanzala.vocabapp --web-dir www --yes || true
-          npx cap add android || true
+          npx cap add android
           npx cap sync android
+
+      - name: Generate App Icons & Splash
+        run: node resources/generate-icons.js
 
       - name: Build Debug APK
         run: |
@@ -45,3 +45,9 @@ jobs:
         with:
           name: Mostafa-Vocab-App-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Upload Icons (PNG)
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mostafa-Vocab-App
+          path: resources/png/
