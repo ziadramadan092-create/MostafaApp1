@@ -1,0 +1,6 @@
+{
+  "appId": "com.hanzala.vocabapp",
+  "appName": "قاموس مصطفى حنظل",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
