@@ -1,0 +1,13 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "mostafaapp10.vercel",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "mostafaapp10.vercel",
+  "start_url": "/",
+  "theme_color": "#4A00E0",
+  "description": "تطبيق لحفظ الكلمات الإنجليزية وتعلمها",
+  "id": "مصطفى حنظل"
+}
