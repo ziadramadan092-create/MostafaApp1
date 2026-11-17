@@ -27,13 +27,19 @@ jobs:
       - name: Install dependencies
         run: npm install --loglevel=error
 
-      # ... (خطوة Add Android platform) ...
       - name: Rebuild sharp
         run: npm rebuild sharp
 
       - name: Install sharp explicitly
         run: npm install sharp --no-save --loglevel=error
 
+      # 1. أولاً: إنشاء مجلد الأندرويد ومزامنته
+      - name: Add Android platform
+        run: |
+          npx cap add android
+          npx cap sync android
+
+      # 2. ثانياً: توليد الأيقونات (الآن سيجد المجلد)
       - name: Generate App Icons & Splash
         run: node resources/generate-icons.js
 
@@ -41,7 +47,7 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
